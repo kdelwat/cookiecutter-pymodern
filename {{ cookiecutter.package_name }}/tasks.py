@@ -3,6 +3,8 @@ from invoke import task
 
 @task
 def clean(context):
+    context.run('rm -rf **/*.pyc')
+    context.run('rm -rf **/__pycache__/')
     context.run('rm -rf build/')
     context.run('rm -rf dist/')
     context.run('rm -rf *.egg-info/')
