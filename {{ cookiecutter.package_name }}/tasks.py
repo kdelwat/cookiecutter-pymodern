@@ -22,5 +22,5 @@ def register(context):
 
 
 @task
-def upload(context):
+def deploy(context):
     context.run('twine upload dist/*')
