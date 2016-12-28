@@ -29,6 +29,7 @@ for general use:
 
 - `clean`: Clean build and distribution files, including `.pyc` compiled files.
 - `build`: Build the package.
+- `lint`: Run Coala to lint the package with default settings.
 
 # Deployment
 
