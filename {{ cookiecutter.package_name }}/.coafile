@@ -2,3 +2,9 @@
 files = {{ cookiecutter.package_name }}/**/*.py
 bears = PyLintBear, FilenameBear
 pylint_disable = ''
+
+{% if cookiecutter.use_type_checking_with_mypy == 'y' %}
+[TypeCheck]
+files = {{ cookiecutter.package_name }}/**/*.py
+bears = MypyBear
+{% endif %}

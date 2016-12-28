@@ -4,6 +4,9 @@ from invoke import task
 @task
 def setup(context):
     context.run('cib install PyLintBear FilenameBear')
+    {% if cookiecutter.use_type_checking_with_mypy == 'y' %}
+    context.run('cib install MypyBear')
+    {% endif %}
 
 
 @task

@@ -5,5 +5,6 @@
   "project_name": "My Package",
   "package_name": "my_package",
   "version": "0.1.0",
-  "short_description": "A really nice package"
+  "short_description": "A really nice package",
+  "use_type_checking_with_mypy": "n"
 }
