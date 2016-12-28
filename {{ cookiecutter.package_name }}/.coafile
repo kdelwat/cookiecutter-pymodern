@@ -1,0 +1,4 @@
+[Linter]
+files = {{ cookiecutter.package_name }}/**/*.py
+bears = PyLintBear, FilenameBear
+pylint_disable = ''

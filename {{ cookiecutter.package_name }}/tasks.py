@@ -2,12 +2,18 @@ from invoke import task
 
 
 @task
+def setup(context):
+    context.run('cib install PyLintBear FilenameBear')
+
+
+@task
 def clean(context):
     context.run('rm -rf **/*.pyc')
     context.run('rm -rf **/__pycache__/')
     context.run('rm -rf build/')
     context.run('rm -rf dist/')
     context.run('rm -rf *.egg-info/')
+    context.run('rm -rf *.py.orig')
 
 
 @task(pre=[clean])
@@ -26,3 +32,8 @@ def register(context):
 @task
 def deploy(context):
     context.run('twine upload dist/*')
+
+
+@task
+def lint(context):
+    context.run('coala')
