@@ -2,6 +2,15 @@
 
 A modern package template for Cookiecutter, targetting Python 3.
 
+# Features
+
+- Task running using [Invoke](http://www.pyinvoke.org/), instead of a Makefile.
+- PyPI registration and deployment using [Twine](https://github.com/pypa/twine).
+- Linting using [Coala](https://github.com/coala/coala) as a unified interface
+  to multiple linters, including [Pylint](https://github.com/PyCQA/pylint/).
+- *(Optional)* support for type-checking
+  with [Mypy](https://github.com/python/mypy)
+
 # Setup
 
 1. Ensure cookiecutter is installed: `pip install cookiecutter`
